@@ -15,4 +15,13 @@ function SearchBar({onSearch}: SearchBarProps){
         onSearch(city);
         setCity("");
     };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+            <button type="submit">Search</button>
+        </form>
+    )
 }
+
+export default SearchBar;
